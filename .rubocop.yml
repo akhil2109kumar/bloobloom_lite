@@ -1,0 +1,8 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb' # Ignore schema file
+    - 'vendor/**/*' # Ignore vendor directory
+  NewCops: enable
+
+Layout/LineLength:
+  Max: 100

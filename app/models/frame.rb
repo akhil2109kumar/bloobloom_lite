@@ -11,4 +11,16 @@ class Frame < ApplicationRecord
   has_many :prices, as: :priceable, dependent: :destroy
 
   accepts_nested_attributes_for :prices, allow_destroy: true
+
+  after_create :build_prices
+
+  def price_in_currency(currency)
+    prices.find { |p| p.currency == currency }&.amount
+  end
+
+  private
+
+  def build_prices
+    PriceService.new(self).build_prices_in_different_currencies
+  end
 end

@@ -34,6 +34,9 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', require: false
 gem 'jwt', '~> 2.5'
+gem 'money-rails' # Provides support for managing money and currency in Rails models
+gem 'pagy', '~> 0.6.0' # For pagination
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

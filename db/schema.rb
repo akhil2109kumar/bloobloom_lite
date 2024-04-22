@@ -10,9 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_19_062609) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_21_182519) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "frames", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description"
+    t.integer "status", default: 0, null: false
+    t.integer "stock", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.string "priceable_type", null: false
+    t.bigint "priceable_id", null: false
+    t.decimal "amount", null: false
+    t.string "currency", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["priceable_type", "priceable_id", "currency"], name: "index_prices_on_priceable_type_and_priceable_id_and_currency", unique: true
+    t.index ["priceable_type", "priceable_id"], name: "index_prices_on_priceable"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

@@ -3,11 +3,12 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:create]
+      resources :users, only: %i[create] do
+        get 'my_basket', on: :collection
+      end
       resources :frames, only: %i[show index]
       resources :lenses, only: %i[show index]
       resources :glasses, only: %i[create]
-
       post :login, to: 'sessions#create'
 
       # Admin APIs

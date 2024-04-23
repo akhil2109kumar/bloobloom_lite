@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :users, only: [:create]
       resources :frames, only: %i[show index]
       resources :lenses, only: %i[show index]
+      resources :glasses, only: %i[create]
 
       post :login, to: 'sessions#create'
 

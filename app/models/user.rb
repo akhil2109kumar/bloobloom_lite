@@ -5,4 +5,6 @@ class User < ApplicationRecord
   has_secure_password
 
   include UserAttributes
+  has_one :shopping_basket
+  has_many :glasses, through: :shopping_basket
 end

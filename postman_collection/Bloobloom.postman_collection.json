@@ -1,0 +1,1079 @@
+{
+	"info": {
+		"_postman_id": "d8f766bc-3ee7-4abf-a0ef-3edebbeb4a55",
+		"name": "Bloobloom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin APIs",
+			"item": [
+				{
+					"name": "Lenses",
+					"item": [
+						{
+							"name": "Add Lens",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTM5MzcyNzN9.PeHT7shugKQGe4_j8F9IsBNAOb1_bOk2D2mJ5yH715s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"lens\":{\n                \"description\": \"dss\",\n                \"prescription_type\": \"fashion\",\n                \"lens_type\":\"classic\",\n                \"colour\": \"ddas\",\n                \"stock\": \"10\",\n                \"prices_attributes\": [\n                    {\n                    \"currency\": \"USD\",\n                    \"amount\": 100\n                    }\n                ]\n            }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/v1/lenses",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"lenses"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add Lens",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"lens\":{\n                \"description\": \"dss\",\n                \"prescription_type\": \"fashion\",\n                \"lens_type\":\"classic\",\n                \"colour\": \"ddas\",\n                \"stock\": \"10\",\n                \"prices_attributes\": [\n                    {\n                    \"currency\": \"USD\",\n                    \"amount\": 100\n                    }\n                ]\n            }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/v1/lenses",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"lenses"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"af38e6149f7b6c5a9124b73a06944224\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "b102dfd9-a83d-4686-ad60-2781ede9ca7c"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.022029"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=0.11, sql.active_record;dur=11.14, instantiation.active_record;dur=0.28, render.active_model_serializers;dur=2.27, process_action.action_controller;dur=19.64"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"description\": \"dss\",\n    \"prescription_type\": \"fashion\",\n    \"lens_type\": \"classic\",\n    \"colour\": \"ddas\",\n    \"stock\": 10,\n    \"prices\": [\n        {\n            \"amount\": \"100.0\",\n            \"currency\": \"USD\"\n        },\n        {\n            \"amount\": \"81.0\",\n            \"currency\": \"GBP\"\n        },\n        {\n            \"amount\": \"94.0\",\n            \"currency\": \"EUR\"\n        },\n        {\n            \"amount\": \"71.0\",\n            \"currency\": \"JOD\"\n        },\n        {\n            \"amount\": \"15469.0\",\n            \"currency\": \"JPY\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Lens",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTM5MzcyNzN9.PeHT7shugKQGe4_j8F9IsBNAOb1_bOk2D2mJ5yH715s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/lenses/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"lenses",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Lens",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTM5MzcyNzN9.PeHT7shugKQGe4_j8F9IsBNAOb1_bOk2D2mJ5yH715s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/lenses/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"lenses",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Frames",
+					"item": [
+						{
+							"name": "Add Frame",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTQxNTUzODF9.6ofi-UaLKp2RarKtMR9h3M9u1ixQnoxxPuMQlv4k1vg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"frame\":\n    {\n     \"name\": \"Frame 1\",\n     \"description\": \"frame 1 description\",\n     \"status\": \"active\",\n     \"stock\": 10,\n     \"prices_attributes\": [{\n         \"amount\": 10,\n         \"currency\": \"USD\"\n     }]\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/v1/frames",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"frames"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"frame\":\n    {\n     \"name\": \"Frame 1\",\n     \"description\": \"frame 1 description\",\n     \"status\": \"active\",\n     \"stock\": 10,\n     \"prices_attributes\": [{\n         \"amount\": 10,\n         \"currency\": \"USD\"\n     }]\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/v1/frames",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"frames"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e2c01bbc95d7ebb75f8fe5f0354ec89f\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "80f7178c-106c-45fb-9016-740c1a3e92f7"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.025983"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=0.13, sql.active_record;dur=12.11, instantiation.active_record;dur=0.26, render.active_model_serializers;dur=2.18, process_action.action_controller;dur=22.00"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 64,\n    \"name\": \"Frame 1\",\n    \"description\": \"frame 1 description\",\n    \"status\": \"active\",\n    \"stock\": 10,\n    \"prices\": [\n        {\n            \"amount\": \"10.0\",\n            \"currency\": \"USD\"\n        },\n        {\n            \"amount\": \"8.1\",\n            \"currency\": \"GBP\"\n        },\n        {\n            \"amount\": \"9.4\",\n            \"currency\": \"EUR\"\n        },\n        {\n            \"amount\": \"7.1\",\n            \"currency\": \"JOD\"\n        },\n        {\n            \"amount\": \"1547.0\",\n            \"currency\": \"JPY\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Frame",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTQxNTUzODF9.6ofi-UaLKp2RarKtMR9h3M9u1ixQnoxxPuMQlv4k1vg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/frames/2",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"frames",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Frame",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTQxNTUzODF9.6ofi-UaLKp2RarKtMR9h3M9u1ixQnoxxPuMQlv4k1vg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"frame\":\n    {\n     \"name\": \"Frame 1 updated\",\n     \"description\": \"frame 1 description adddd\",\n     \"status\": \"active\",\n     \"stock\": 11\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/v1/frames/56",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"frames",
+										"56"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User APIs",
+			"item": [
+				{
+					"name": "Glasses",
+					"item": [
+						{
+							"name": "Add Glasses",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTM5MzcyNzN9.PeHT7shugKQGe4_j8F9IsBNAOb1_bOk2D2mJ5yH715s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"glass\": {\n        \"frame_id\": 64,\n        \"lens_id\": 3\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/v1/glasses",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"glasses"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add Glasses",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"glass\": {\n        \"frame_id\": 64,\n        \"lens_id\": 3\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:3000/api/v1/glasses",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"glasses"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "strict-origin-when-cross-origin"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"950c30dee079b0fc508aa44fff7c1d69\""
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=0, private, must-revalidate"
+										},
+										{
+											"key": "X-Request-Id",
+											"value": "71f491d8-c5d7-4e43-82f2-8f4896391c86"
+										},
+										{
+											"key": "X-Runtime",
+											"value": "0.017464"
+										},
+										{
+											"key": "Server-Timing",
+											"value": "start_processing.action_controller;dur=0.07, sql.active_record;dur=9.64, instantiation.active_record;dur=0.51, render.active_model_serializers;dur=3.62, process_action.action_controller;dur=15.19"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"frame\": {\n        \"id\": 64,\n        \"name\": \"Frame 1\",\n        \"description\": \"frame 1 description\",\n        \"status\": \"active\",\n        \"stock\": 8\n    },\n    \"lens\": {\n        \"id\": 3,\n        \"description\": \"dss\",\n        \"prescription_type\": \"fashion\",\n        \"lens_type\": \"classic\",\n        \"colour\": \"ddas\",\n        \"stock\": 9\n    },\n    \"price\": \"17016.0\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Lenses",
+					"item": [
+						{
+							"name": "List Lenses",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTM5MzcyNzN9.PeHT7shugKQGe4_j8F9IsBNAOb1_bOk2D2mJ5yH715s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/lenses",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"lenses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "VIew Lens",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTM5MzcyNzN9.PeHT7shugKQGe4_j8F9IsBNAOb1_bOk2D2mJ5yH715s",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/lenses/1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"lenses",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Frames",
+					"item": [
+						{
+							"name": "List Frames",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTQxNTUzODF9.6ofi-UaLKp2RarKtMR9h3M9u1ixQnoxxPuMQlv4k1vg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/frames?page=1",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"frames"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View Frame",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTQxNTUzODF9.6ofi-UaLKp2RarKtMR9h3M9u1ixQnoxxPuMQlv4k1vg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/frames/56",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"frames",
+										"56"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"email\": \"akhilesh15@yopmail.com\",\n        \"password\": \"123456\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTM4NTEwNzF9.TsNvnLlnCyBPZ6NhDTAI5ZcUC3vLCeOdQzggNiBNxA4",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"email\": \"akhilesh15@yopmail.com\",\n        \"password\": \"123456\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/v1/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"acc7a5ba780c96b263e31ecc960eba9a\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "6b438026-c829-419b-893e-94d9a56462c6"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.280864"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "sql.active_record;dur=4.22, start_processing.action_controller;dur=0.13, instantiation.active_record;dur=2.85, render.active_model_serializers;dur=0.32, process_action.action_controller;dur=217.07"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 4,\n        \"name\": \"akhilesh\",\n        \"email\": \"akhilesh15@yopmail.com\",\n        \"currency\": \"JPY\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTM5ODY4NTJ9.Ap6axyE148_27TmrGnwlQWYM2Ov_jpIz0OaeMmKvukU\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Register New user",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"name\": \"akhilesh\",\n        \"email\": \"akhilesh24@yopmail.com\",\n        \"password\": \"123456\",\n        \"password_confirmation\": \"123456\",\n        \"currency\": \"USD\"\n\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"name\": \"akhilesh\",\n        \"email\": \"akhilesh24@yopmail.com\",\n        \"password\": \"123456\",\n        \"password_confirmation\": \"123456\",\n        \"currency\": \"USD\"\n\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/v1/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b31ea2ee71e45af6c2d809b5c0afa921\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "4efb1de1-bd9a-4031-98a9-3624def87374"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.220176"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.09, sql.active_record;dur=6.51, render.active_model_serializers;dur=0.20, process_action.action_controller;dur=217.81"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\",\n    \"user\": {\n        \"id\": 13,\n        \"name\": \"akhilesh\",\n        \"email\": \"akhilesh24@yopmail.com\",\n        \"currency\": \"USD\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMywiZXhwIjoxNzEzOTAwNTY0fQ.vEB9--ixTl9YSLbQ9yeV1ASxS-JZ6xx7EUTHpG2goFw\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Basket",
+			"item": [
+				{
+					"name": "View Basket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE3MTM5MzcyNzN9.PeHT7shugKQGe4_j8F9IsBNAOb1_bOk2D2mJ5yH715s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/users/my_basket",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"my_basket"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "View Basket",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/users/my_basket",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"my_basket"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9b6913806a73c1c1b6b6f38172ae6244\""
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "b34de65b-2418-41a3-9bdf-16397a498aa1"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.014971"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "start_processing.action_controller;dur=0.10, sql.active_record;dur=4.80, instantiation.active_record;dur=0.58, render.active_model_serializers;dur=3.82, process_action.action_controller;dur=10.96"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"total_price\": \"17016.0\",\n    \"currency\": \"JPY\",\n    \"glasses\": [\n        {\n            \"id\": 3,\n            \"frame\": {\n                \"id\": 64,\n                \"name\": \"Frame 1\",\n                \"description\": \"frame 1 description\",\n                \"status\": \"active\",\n                \"stock\": 8,\n                \"created_at\": \"2024-04-23T19:50:38.726Z\",\n                \"updated_at\": \"2024-04-23T19:50:38.726Z\"\n            },\n            \"lens\": {\n                \"id\": 3,\n                \"description\": \"dss\",\n                \"prescription_type\": \"fashion\",\n                \"lens_type\": \"classic\",\n                \"colour\": \"ddas\",\n                \"stock\": 9,\n                \"created_at\": \"2024-04-23T19:53:35.838Z\",\n                \"updated_at\": \"2024-04-23T19:53:35.838Z\"\n            },\n            \"price\": \"17016.0\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
